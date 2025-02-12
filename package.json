@@ -1,0 +1,28 @@
+{
+  "name": "steam-api-interface",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "steam api interface fully compatible with typescript",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node ./build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tl3n/steam-api-interface.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tl3n/steam-api-interface/issues"
+  },
+  "homepage": "https://github.com/tl3n/steam-api-interface#readme",
+  "devDependencies": {
+    "@types/axios": "^0.9.36",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
+}

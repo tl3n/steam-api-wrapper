@@ -1,0 +1,8 @@
+# Dependencies
+/node_modules
+
+# Build files
+/build
+
+#TEMP
+/src/index.ts
