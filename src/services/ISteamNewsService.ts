@@ -3,17 +3,16 @@ import {
   IGetNewsForAppParams,
   IGetNewsForAppResponse,
 } from "../types/newsServiceTypes.js";
+import { SteamService } from "./SteamService.js";
 
-const baseUrl = "http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?";
-
-export class SteamNewsService {
-  private steamClient: SteamClient;
+export class ISteamNewsService extends SteamService{
+  private baseUrl = "http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?";
 
   constructor(steamClient: SteamClient) {
-    this.steamClient = steamClient;
+    super(steamClient);
   }
 
   async GetNewsForApp(params: IGetNewsForAppParams): Promise<IGetNewsForAppResponse> {
-    return await this.steamClient.get<IGetNewsForAppResponse>(baseUrl, params);
+    return await this.steamClient.get<IGetNewsForAppResponse>(this.baseUrl, params);
   }
 }
