@@ -1,14 +1,14 @@
-import { SteamClient } from "../SteamClient";
+import { SteamClient } from '../SteamClient';
 import {
   IGetFriendListParams,
   IGetFriendListResponse,
   IGetPlayerSummariesParams,
   IGetPlayerSummariesResponse,
-} from "../types/ISteamUserService";
-import { SteamService } from "./SteamService";
+} from '../types/ISteamUserService';
+import { SteamService } from './SteamService';
 
 export class SteamUserService extends SteamService {
-  private baseUrl = "http://api.steampowered.com/ISteamUser/";
+  private baseUrl = 'http://api.steampowered.com/ISteamUser/';
 
   constructor(steamClient: SteamClient) {
     super(steamClient);
@@ -18,7 +18,7 @@ export class SteamUserService extends SteamService {
     params: IGetPlayerSummariesParams
   ): Promise<IGetPlayerSummariesResponse> {
     return await this.steamClient.get<IGetPlayerSummariesResponse>(
-      this.baseUrl + "GetPlayerSummaries/v0002/?",
+      this.baseUrl + 'GetPlayerSummaries/v0002/?',
       params
     );
   }
@@ -27,7 +27,7 @@ export class SteamUserService extends SteamService {
     params: IGetFriendListParams
   ): Promise<IGetFriendListResponse> {
     return await this.steamClient.get<IGetFriendListResponse>(
-      this.baseUrl + "GetFriendList/v0001/?",
+      this.baseUrl + 'GetFriendList/v0001/?',
       params
     );
   }

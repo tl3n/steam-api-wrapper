@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 export class SteamClient {
   private steamApiKey: string;
@@ -8,9 +8,9 @@ export class SteamClient {
   }
 
   async get<T>(url: string, params: object): Promise<T> {
-    const paramsWithKey = {...params, key: this.steamApiKey}
-    const response = await axios.get<T>(url, {params: paramsWithKey});
-    
+    const paramsWithKey = { ...params, key: this.steamApiKey };
+    const response = await axios.get<T>(url, { params: paramsWithKey });
+
     return response.data;
   }
 }

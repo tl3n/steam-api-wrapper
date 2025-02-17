@@ -1,4 +1,4 @@
-import { SteamClient } from "../SteamClient";
+import { SteamClient } from '../SteamClient';
 
 export class SteamService {
   protected steamClient: SteamClient;

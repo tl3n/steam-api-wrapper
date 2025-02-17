@@ -1,14 +1,14 @@
-import { describe, test, expect } from "@jest/globals";
-import { SteamClient } from "../../src/SteamClient";
-import { SteamPlayerService } from "../../src/services/SteamPlayerService";
+import { describe, test, expect } from '@jest/globals';
+import { SteamClient } from '../../src/SteamClient';
+import { SteamPlayerService } from '../../src/services/SteamPlayerService';
 
-describe("SteamPlayerService", () => {
-  const steamClient = new SteamClient("API_KEY");
+describe('SteamPlayerService', () => {
+  const steamClient = new SteamClient('API_KEY');
   const playerService = new SteamPlayerService(steamClient);
 
   test("should return player's owned games", async () => {
     const response = await playerService.GetOwnedGames({
-      steamid: "76561197960434622",
+      steamid: '76561197960434622',
     });
 
     expect(response.response).toBeDefined();
@@ -18,7 +18,7 @@ describe("SteamPlayerService", () => {
 
   test("should retrun player's recently played games", async () => {
     const response = await playerService.GetRecentlyPlayedGames({
-      steamid: "76561197960434622",
+      steamid: '76561197960434622',
     });
 
     expect(response.response).toBeDefined();
