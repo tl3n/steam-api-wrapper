@@ -23,7 +23,7 @@ export interface IPlayerSummary {
 }
 
 export interface IGetPlayerSummariesParams {
-  steamids: string[];
+  steamids: string;
   format?: "json" | "xml" | "vdf";
 }
 
@@ -46,7 +46,9 @@ export interface IGetFriendListParams {
 }
 
 export interface IGetFriendListResponse {
-  friends: IFriend[];
+  friendslist: {
+    friends: IFriend[];
+  }
 }
 
 

@@ -1,9 +1,11 @@
-import { SteamClient } from "../SteamClient.js";
+import { SteamClient } from "../SteamClient";
 import {
+  IGetFriendListParams,
+  IGetFriendListResponse,
   IGetPlayerSummariesParams,
   IGetPlayerSummariesResponse,
-} from "../types/ISteamUserService.js";
-import { SteamService } from "./SteamService.js";
+} from "../types/ISteamUserService";
+import { SteamService } from "./SteamService";
 
 export class SteamUserService extends SteamService {
   private baseUrl = "http://api.steampowered.com/ISteamUser/";
@@ -21,5 +23,12 @@ export class SteamUserService extends SteamService {
     );
   }
 
-  async GetFriendList() {}
+  async GetFriendList(
+    params: IGetFriendListParams
+  ): Promise<IGetFriendListResponse> {
+    return await this.steamClient.get<IGetFriendListResponse>(
+      this.baseUrl + "GetFriendList/v0001/?",
+      params
+    );
+  }
 }
