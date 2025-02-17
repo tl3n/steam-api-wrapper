@@ -1,11 +1,11 @@
-import { SteamClient } from "../SteamClient.js";
+import { SteamClient } from "../SteamClient";
 import {
   IGetOwnedGamesParams,
   IGetOwnedGamesResponse,
   IGetRecentlyPlayedGamesParams,
   IGetRecentlyPlayedGamesResponse,
-} from "../types/ISteamPlayerService.js";
-import { SteamService } from "./SteamService.js";
+} from "../types/ISteamPlayerService";
+import { SteamService } from "./SteamService";
 
 export class SteamPlayerService extends SteamService {
   private baseUrl = "http://api.steampowered.com/IPlayerService/";

@@ -1,10 +1,10 @@
 export interface IGame {
   appid: number;
-  name: string;
-  playtime_2weeks: number;
+  name?: string;
+  playtime_2weeks?: number;
   playtime_forever: number;
-  img_icon_url: string;
-  img_logo_url: string;
+  img_icon_url?: string;
+  img_logo_url?: string;
   has_community_visible_stats?: boolean;
 }
 
@@ -17,17 +17,21 @@ export interface IGetOwnedGamesParams {
 }
 
 export interface IGetOwnedGamesResponse {
-  game_count: number;
-  games: IGame[];
+  response: {
+    game_count: number;
+    games: IGame[];
+  };
 }
 
 export interface IGetRecentlyPlayedGamesParams {
   steamid: string;
-  count: number;
+  count?: number;
   format?: "json" | "xml" | "vdf";
 }
 
 export interface IGetRecentlyPlayedGamesResponse {
-  total_count: number;
-  games: IGame[];
+  response: {
+    total_count: number;
+    games: IGame[];
+  }
 }
