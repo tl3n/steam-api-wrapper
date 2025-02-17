@@ -7,7 +7,7 @@ export class SteamClient {
     this.steamApiKey = steamApiKey;
   }
 
-  async get<T>(url: string, params: any): Promise<T> {
+  async get<T>(url: string, params: object): Promise<T> {
     const paramsWithKey = {...params, key: this.steamApiKey}
     const response = await axios.get<T>(url, {params: paramsWithKey});
     
