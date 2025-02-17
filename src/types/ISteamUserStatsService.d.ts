@@ -4,13 +4,13 @@ export interface IAchievementPercentage {
 }
 
 export interface IGetGlobalAchievementPercentagesForAppParams {
-  gameid: string;
+  gameid: number;
   format?: "json" | "xml" | "vdf";
 }
 
 export interface IGetGlobalAchievementPercentagesForAppResponse {
   achievementpercentages: {
-    achievement: IAchievementPercentage[];
+    achievements: IAchievementPercentage[];
   };
 }
 
@@ -24,7 +24,7 @@ export interface IAchievement {
 
 export interface IGetPlayerAchievementsParams {
   steamid: string;
-  appid: string;
+  appid: number;
   l?: string;
 }
 
@@ -33,12 +33,13 @@ export interface IGetPlayerAchievementsResponse {
     steamID: string;
     gameName: string;
     achievements: IAchievement[];
+    success: boolean;
   };
 }
 
 export interface IGetUserStatsForGameParams {
   steamid: string;
-  appid: string;
+  appid: number;
   l?: string;
 }
 

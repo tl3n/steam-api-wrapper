@@ -1,5 +1,5 @@
 export const testEnvironment = 'node';
-export const testMatch = ['**/src/**/*.test.ts'];
+export const testMatch = ['**/tests/**/*.test.ts'];
 export const transform = {
   '^.+\\.ts$': 'ts-jest',
 };

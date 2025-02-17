@@ -1,5 +1,5 @@
-import { SteamService } from "./SteamService.js";
-import { SteamClient } from "../SteamClient.js";
+import { SteamService } from "./SteamService";
+import { SteamClient } from "../SteamClient";
 import {
   IGetGlobalAchievementPercentagesForAppParams,
   IGetGlobalAchievementPercentagesForAppResponse,
@@ -7,7 +7,7 @@ import {
   IGetPlayerAchievementsResponse,
   IGetUserStatsForGameParams,
   IGetUserStatsForGameResponse,
-} from "../types/ISteamUserStatsService.js";
+} from "../types/ISteamUserStatsService";
 
 export class SteamUserStatsService extends SteamService {
   private baseUrl = "http://api.steampowered.com/ISteamUserStats/";

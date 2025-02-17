@@ -1,7 +1,7 @@
 export interface IGetNewsForAppParams {
-  appid: string;
+  appid: number;
   count?: number;
-  maxLength?: number;
+  maxlength?: number;
   format?: "json";
 }
 
@@ -9,7 +9,7 @@ export interface INewsItem {}
 
 export interface IGetNewsForAppResponse {
   appnews: {
-    appid: string;
+    appid: number;
     newsitems: INewsItem[];
   };
 }

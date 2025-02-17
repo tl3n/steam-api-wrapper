@@ -1,9 +1,9 @@
-import { SteamClient } from "../SteamClient.js";
+import { SteamClient } from "../SteamClient";
 import {
   IGetNewsForAppParams,
   IGetNewsForAppResponse,
-} from "../types/ISteamNewsService.js";
-import { SteamService } from "./SteamService.js";
+} from "../types/ISteamNewsService";
+import { SteamService } from "./SteamService";
 
 export class SteamNewsService extends SteamService {
   private baseUrl =
