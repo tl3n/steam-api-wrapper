@@ -2,7 +2,7 @@ export interface IGetNewsForAppParams {
   appid: number;
   count?: number;
   maxlength?: number;
-  format?: 'json';
+  format?: "json";
 }
 
 export interface INewsItem {

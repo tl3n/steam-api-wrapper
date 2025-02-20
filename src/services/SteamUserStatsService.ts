@@ -1,5 +1,5 @@
-import { SteamService } from './SteamService';
-import { SteamClient } from '../SteamClient';
+import { SteamService } from "./SteamService";
+import { SteamClient } from "../SteamClient";
 import {
   IGetGlobalAchievementPercentagesForAppParams,
   IGetGlobalAchievementPercentagesForAppResponse,
@@ -7,10 +7,10 @@ import {
   IGetPlayerAchievementsResponse,
   IGetUserStatsForGameParams,
   IGetUserStatsForGameResponse,
-} from '../types/ISteamUserStatsService';
+} from "../types/ISteamUserStatsService";
 
 export class SteamUserStatsService extends SteamService {
-  private baseUrl = 'http://api.steampowered.com/ISteamUserStats/';
+  private baseUrl = "http://api.steampowered.com/ISteamUserStats/";
   constructor(steamClient: SteamClient) {
     super(steamClient);
   }
@@ -19,7 +19,7 @@ export class SteamUserStatsService extends SteamService {
     params: IGetGlobalAchievementPercentagesForAppParams
   ): Promise<IGetGlobalAchievementPercentagesForAppResponse> {
     return await this.steamClient.get<IGetGlobalAchievementPercentagesForAppResponse>(
-      this.baseUrl + 'GetGlobalAchievementPercentagesForApp/v0002/?',
+      this.baseUrl + "GetGlobalAchievementPercentagesForApp/v0002/?",
       params
     );
   }
@@ -28,7 +28,7 @@ export class SteamUserStatsService extends SteamService {
     params: IGetPlayerAchievementsParams
   ): Promise<IGetPlayerAchievementsResponse> {
     return await this.steamClient.get<IGetPlayerAchievementsResponse>(
-      this.baseUrl + 'GetPlayerAchievements/v0001/?',
+      this.baseUrl + "GetPlayerAchievements/v0001/?",
       params
     );
   }
@@ -37,7 +37,7 @@ export class SteamUserStatsService extends SteamService {
     params: IGetUserStatsForGameParams
   ): Promise<IGetUserStatsForGameResponse> {
     return await this.steamClient.get<IGetUserStatsForGameResponse>(
-      this.baseUrl + 'GetUserStatsForGame/v0002/?',
+      this.baseUrl + "GetUserStatsForGame/v0002/?",
       params
     );
   }

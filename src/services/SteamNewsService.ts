@@ -1,13 +1,13 @@
-import { SteamClient } from '../SteamClient';
+import { SteamClient } from "../SteamClient";
 import {
   IGetNewsForAppParams,
   IGetNewsForAppResponse,
-} from '../types/ISteamNewsService';
-import { SteamService } from './SteamService';
+} from "../types/ISteamNewsService";
+import { SteamService } from "./SteamService";
 
 export class SteamNewsService extends SteamService {
   private baseUrl =
-    'http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?';
+    "http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?";
 
   constructor(steamClient: SteamClient) {
     super(steamClient);

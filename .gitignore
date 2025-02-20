@@ -3,6 +3,4 @@
 
 # Build files
 /build
-
-#TEMP
-/src/index.ts
+/dist
