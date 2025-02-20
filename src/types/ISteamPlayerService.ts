@@ -12,7 +12,6 @@ export interface IGetOwnedGamesParams {
   steamid: string;
   include_appinfo?: boolean;
   include_played_free_games?: boolean;
-  format?: "json" | "xml" | "vdf";
   appids_filter?: number[];
 }
 
@@ -26,7 +25,6 @@ export interface IGetOwnedGamesResponse {
 export interface IGetRecentlyPlayedGamesParams {
   steamid: string;
   count?: number;
-  format?: "json" | "xml" | "vdf";
 }
 
 export interface IGetRecentlyPlayedGamesResponse {

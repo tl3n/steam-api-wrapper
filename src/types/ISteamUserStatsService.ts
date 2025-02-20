@@ -5,7 +5,6 @@ export interface IAchievementPercentage {
 
 export interface IGetGlobalAchievementPercentagesForAppParams {
   gameid: number;
-  format?: "json" | "xml" | "vdf";
 }
 
 export interface IGetGlobalAchievementPercentagesForAppResponse {
