@@ -6,6 +6,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
+  "keywords": ["steam", "steam api", "steam web api", "typescript"],
   "scripts": {
     "build": "tsup",
     "test": "npx jest"
